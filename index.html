@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <title>MAD GYM</title>
+    <style>
+      
+    @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      height:100vh;
+      display: grid;
+      place-items: center;
+      background-color:#1D1D1D;
+      color:#F8F6F5;
+    }
+
+    .container{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      position: relative;
+    }
+    #logo__bm{
+      width:1000px;
+      
+    }
+    .st0{
+      fill:none;
+      stroke:#F8F6F5;
+      stroke-width:14;
+      transition: ease-in-out;
+    }
+   
+    .text-svg_1 {
+      font-family: 'Lateef', cursive;
+      font-size: 180px;
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+      stroke-dasharray: 900; /* يجب أن تكون هذه القيمة أكبر من طول النص */
+      stroke-dashoffset: 450; /* يجب أن تكون نفس القيمة */
+      animation: drawText 3.8s forwards;
+    }
+    .text-svg_2 {
+      font-family: 'Lateef', cursive;
+      font-size: 180px;
+      fill: none;
+      stroke: #f21921;
+      stroke-width: 2;
+      stroke-dasharray: 500; /* يجب أن تكون هذه القيمة أكبر من طول النص */
+      stroke-dashoffset: 450; /* يجب أن تكون نفس القيمة */
+      animation: drawText 3.8s forwards;
+    }
+    .text-svg_3 {
+      font-family: 'Lateef', cursive;
+      font-size: 180px;
+      fill: none;
+      stroke: #f21921;
+      stroke-width: 2;
+      stroke-dasharray: 500; /* يجب أن تكون هذه القيمة أكبر من طول النص */
+      stroke-dashoffset: 450; /* يجب أن تكون نفس القيمة */
+      animation: drawText 3.8s forwards;
+    }
+    
+
+
+    @keyframes drawText {
+      0% {
+        stroke-dashoffset: 450;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .text{
+      color:  #ffffff;
+      margin-top:30px;
+      font-size:70px;
+      font-family: 'Lateef', cursive; /* تعيين الخط هنا */
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      position: absolute;
+      top: 350px;
+      right: 30px;
+    }
+
+    </style>
+    
+</head>
+
+<body>    
+    <div class="container">
+        <svg id="logo__bm" x="0px" y="0px" viewBox="0 0 400 150">
+          <!-- رسم حرف F باستخدام عنصر النص -->
+          <text  x="80" y="130" class="text-svg_1">M</text>
+          <!-- رسم حرف S باستخدام عنصر النص -->
+          <text  x="200" y="130" class="text-svg_2">A</text>
+          <text  x="280" y="130" class="text-svg_3">D</text>
+          
+        </svg>
+        <span class="text">GYM</span>
+    </div>
+    <script>
+      // انتظر حتى ينتهي الانميشن ثم قم بتحويل الصفحة
+      const logoText = document.querySelectorAll('.text-svg_2');
+
+      // استمع إلى انتهاء الانميشن
+      logoText.forEach(text => {
+        text.addEventListener('animationend', () => {
+          // تحويل الصفحة بعد انتهاء الانميشن
+          window.location.href = './form.html';
+        });
+      });
+    </script>
+</body>
+</html>
+</html>
